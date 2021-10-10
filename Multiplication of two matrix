@@ -1,0 +1,49 @@
+#include<stdio.h>
+int main()
+{
+int n,i,j,k;
+printf("enter the value of n ");
+scanf("%d",&n);
+int a[n][n],b[n][n],c[n][n];
+printf("enter the element of array of a\n");
+for(i=0;i<n;i++){
+for(j=0;j<n;j++){
+scanf("%d",&a[i][j]);
+}
+}
+for(i=0;i<n;i++){
+for(j=0;j<n;j++){
+printf("%d ",a[i][j]);
+}
+printf("\n");
+} 
+printf("enter the element of array of b\n");
+for(i=0;i<n;i++){
+for(j=0;j<n;j++){
+scanf("%d",&b[i][j]);
+}
+}
+for(i=0;i<n;i++){
+for(j=0;j<n;j++){
+printf("%d ",b[i][j]);
+}
+printf("\n");
+}
+for(i=0;i<n;i++){
+for(j=0;j<n;j++){
+c[i][j]={0};
+for(k=0;k<n;k++){
+c[i][j]=c[i][j]+a[i][k]*b[k][j];
+}
+}
+printf("\n");
+}
+printf("muplication of two matrix is\n");
+for(i=0;i<n;i++){
+for(j=0;j<n;j++){ 
+printf("%d ",c[i][j]);
+}
+printf("\n");
+} 
+return 0;
+}
